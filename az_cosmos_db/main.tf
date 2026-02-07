@@ -1,15 +1,15 @@
 # Cosmos DB Account
 resource "azurerm_cosmosdb_account" "cosmos" {
-  name                          = "${var.name_prefix}-cosmos"
-  location                      = var.location
-  resource_group_name           = var.resource_group_name
-  offer_type                    = "Standard"
-  kind                          = "GlobalDocumentDB"
-  enable_automatic_failover     = true
-  enable_multiple_write_locations = false
-  public_network_access_enabled = false
+  name                              = "${var.name_prefix}-cosmos"
+  location                          = var.location
+  resource_group_name               = var.resource_group_name
+  offer_type                        = "Standard"
+  kind                              = "GlobalDocumentDB"
+  enable_automatic_failover         = true
+  enable_multiple_write_locations   = false
+  public_network_access_enabled     = false
   is_virtual_network_filter_enabled = true
-  tags                          = var.tags
+  tags                              = var.tags
 
   consistency_policy {
     consistency_level       = var.consistency_level
