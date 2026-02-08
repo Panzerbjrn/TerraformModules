@@ -2,6 +2,7 @@
 variable "name" {
   description = "Name of the resource group"
   type        = string
+  default     = null
 }
 
 variable "location" {
@@ -28,4 +29,9 @@ variable "resource_group" {
     location = string
     tags     = map(string)
   })
+  default     = {
+    name     = null
+    location = null
+    tags     = {}
+  }
 }
